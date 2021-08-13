@@ -4,7 +4,7 @@ class Mapa():
 	latitud = models.IntegerField()
 	longitud = models.IntegerField()
 
-class Animales(models.Model, Mapa):
+class Animales(models.Model):
 	propietario = models.CharField(max_length=80)
 	cantidad = models.IntegerField(null=True)
 	informacion = models.TextField(null=True)
@@ -12,11 +12,11 @@ class Animales(models.Model, Mapa):
 	def __str__(self):
 		return self.propietario
 
-class Deforestacion(models.Model, Mapa):
+class Deforestacion(models.Model):
 	number = models.IntegerField(primary_key=True)
 	area = models.IntegerField()
 	cambio = models.IntegerField()
 	
 	def __str__(self):
-		return self.pk
+		return self.number
 	

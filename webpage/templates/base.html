@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="https://static-cdn.multiscreensite.com/runtime/favicon_d1_res.ico"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <title>CIAT</title>
+    </head>
+    <body>
+    <header>
+    <div class="container-fluid">
+    <span class='row'>
+        <div class="col-2" >
+            <img src="https://cu1.uicdn.net/d58/6db58c1ec9c835f41b07f17b625c9/webapp/25716-logo-generator.svg" class=" rounded"> 
+        </div>
+        <div class="col-10">
+            <h1 style="font-size:5vw">Sistema de Informacion sobre Ganaderia y Deforestacion</h1>
+            <div class="btn-group float-right">
+                <a href="{% url 'index' %}" class="button2 btn btn-outline-primary" role="button">Inicio</a>
+                <a href="{% url 'mapa' %}" class="button2 btn btn-outline-primary" role="button">Mapa</a>
+                <a href="javascript:history.back()" class="button2 btn btn-outline-primary" role="button">Atras</a>
+            </div>  
+        </div>
+    </span>
+    </header>
+    {% block content %}
+    {% endblock %}
+    <!-- <a href="/logout">Cerrar sesión</a> -->
+    </body>
+</html>
